@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:evenire2/utils.dart';
+import 'loginscreen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -132,7 +133,11 @@ class HomeScreen extends StatelessWidget {
                     // signinrG2 (1:16)
                     margin: EdgeInsets.fromLTRB(7.39*fem, 0*fem, 7.39*fem, 0*fem),
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                              return const LoginScreen();
+                            }));
+                      },
                       style: TextButton.styleFrom (
                         padding: EdgeInsets.zero,
                       ),

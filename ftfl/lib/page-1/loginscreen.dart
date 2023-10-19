@@ -4,12 +4,15 @@ import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:evenire2/utils.dart';
 
-class Scene extends StatelessWidget {
+import 'addinterests1.dart';
+
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     double baseWidth = 393;
     double fem = MediaQuery.of(context).size.width / baseWidth;
-    double ffem = fem * 0.97;
+    double ffem = fem * 0.97;   
     return Container(
       width: double.infinity,
       child: Container(
@@ -129,40 +132,38 @@ class Scene extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              // continuebutton2B8e (25:40)
-              margin: EdgeInsets.fromLTRB(9*fem, 0*fem, 9.62*fem, 0*fem),
-              width: double.infinity,
-              height: 50.38*fem,
-              decoration: BoxDecoration (
-                borderRadius: BorderRadius.circular(67.1794891357*fem),
-                gradient: LinearGradient (
-                  begin: Alignment(-1, -0),
-                  end: Alignment(1, -0),
-                  colors: <Color>[Color(0xff0008d8), Color(0xff191a3b)],
-                  stops: <double>[0, 1],
+            TextButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const AddInterests1();
+                }));
+              },
+              style: TextButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(67.1794891357 * fem),
                 ),
-                boxShadow: [
-                  BoxShadow(
-                    color: Color(0x26000000),
-                    offset: Offset(0*fem, 3.0230770111*fem),
-                    blurRadius: 2.5192308426*fem,
-                  ),
-                ],
+                backgroundColor: Color(0xff0008d8),
+                padding: EdgeInsets.zero,
+                shadowColor: Color(0x26000000),
+                elevation: 2.5192308426 * fem,
               ),
-              child: Center(
-                child: Text(
-                  'CONTINUE',
-                  style: SafeGoogleFont (
-                    'Inter',
-                    fontSize: 18.1384620667*ffem,
-                    fontWeight: FontWeight.w700,
-                    height: 1.2125*ffem/fem,
-                    color: Color(0xffffffff),
+              child: Container(
+                width: double.infinity,
+                height: 50.38 * fem,
+                child: Center(
+                  child: Text(
+                    'CONTINUE',
+                    style: SafeGoogleFont(
+                      'Inter',
+                      fontSize: 18.1384620667 * ffem,
+                      fontWeight: FontWeight.w700,
+                      height: 1.2125 * ffem / fem,
+                      color: Color(0xffffffff),
+                    ),
                   ),
                 ),
               ),
-            ),
+            )
           ],
         ),
       ),

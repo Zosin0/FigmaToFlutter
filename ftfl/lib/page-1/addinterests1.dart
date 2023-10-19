@@ -4,7 +4,9 @@ import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:evenire2/utils.dart';
 
-class Scene extends StatelessWidget {
+class AddInterests1 extends StatelessWidget {
+  const AddInterests1({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     double baseWidth = 393;
@@ -562,7 +564,7 @@ class Scene extends StatelessWidget {
                                       width: 135*fem,
                                       height: double.infinity,
                                       decoration: BoxDecoration (
-                                        border: Border.all(color: Color(0xff0008d8)),
+                                        border: Border.all(color: Color(0xffffffff)),
                                         borderRadius: BorderRadius.circular(100*fem),
                                       ),
                                       child: Center(
@@ -573,7 +575,7 @@ class Scene extends StatelessWidget {
                                             fontSize: 14.9839448929*ffem,
                                             fontWeight: FontWeight.w700,
                                             height: 1.2125*ffem/fem,
-                                            color: Color(0xff0008d8),
+                                            color: Color(0xffffffff),
                                           ),
                                         ),
                                       ),
@@ -619,7 +621,7 @@ class Scene extends StatelessWidget {
                                       width: 88*fem,
                                       height: double.infinity,
                                       decoration: BoxDecoration (
-                                        border: Border.all(color: Color(0xff0008d8)),
+                                        border: Border.all(color: Color(0xffffffff)),
                                         borderRadius: BorderRadius.circular(100*fem),
                                       ),
                                       child: Center(
@@ -630,7 +632,7 @@ class Scene extends StatelessWidget {
                                             fontSize: 14.9839448929*ffem,
                                             fontWeight: FontWeight.w700,
                                             height: 1.2125*ffem/fem,
-                                            color: Color(0xff0008d8),
+                                            color: Color(0xffffffff),
                                           ),
                                         ),
                                       ),
